@@ -7,12 +7,25 @@ class Calculator {
     return this.result;
   }
 
-  add(number, result) {
-    return number + (this.result + result);
+  add(x, y) {
+    this.result = x + y;
+    return this.result;
   }
 
-  multi(number, result) {
-    return number * (this.result + result);
+  subtract(x, y) {
+    this.result = x - y;
+    return this.result;
+  }
+
+  multiply(x, y) {
+    this.result = x * y;
+    return this.result;
+  }
+
+  divide(x, y) {
+    this.result = x / y;
+    return this.result;
   }
 }
-module.exports = { Calculator };
+
+module.exports = Calculator;
