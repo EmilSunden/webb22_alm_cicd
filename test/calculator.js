@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { Calculator } = require('../src/calculator');
+const Calculator = require('../src/calculator');
 
 describe('Calculator', function () {
   let calc;
@@ -25,24 +25,24 @@ describe('Calculator', function () {
     });
   });
 
-  describe('multi', function () {
+  describe('multiply', function () {
     it('should return 1 when multiplying 1 * 1', function () {
-      assert.equal(calc.multi(1, 1), 1);
+      assert.equal(calc.multiply(1, 1), 1);
     });
     it('should return 0 when multiplying 1 * 0', function () {
-      assert.equal(calc.multi(1, 0), 0);
+      assert.equal(calc.multiply(1, 0), 0);
     });
     it('should return 0 when multiplying 0 * 1', function () {
-      assert.equal(calc.multi(0, 1), 0);
+      assert.equal(calc.multiply(0, 1), 0);
     });
     it('should return 4 when multiplying 2 * 2', function () {
-      assert.equal(calc.multi(2, 2), 4);
+      assert.equal(calc.multiply(2, 2), 4);
     });
     it('should return -4 when multiplying -2 * 2', function () {
-      assert.equal(calc.multi(-2, 2), -4);
+      assert.equal(calc.multiply(-2, 2), -4);
     });
     it('should return 4 when multiplying -2 * -2', function () {
-      assert.equal(calc.multi(-2, -2), 4);
+      assert.equal(calc.multiply(-2, -2), 4);
     });
   });
 });
