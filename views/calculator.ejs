@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>GG Calculator</h1>
+    <form action="">
+      <label>add first number</label>
+      <br />
+      <input type="number" name="value2" />
+      <br />
+      <br />
+      <label>add second number</label>
+      <br />
+      <input type="number" name="value1" />
+      <br />
+      <br />
+      <button type="submit">Calculate</button>
+    </form>
+    <p>Numbers to calculate: <%= val1 ? val1 : 0 %> & <%= val2 ? val2 : 0 %></p>
+    <p>
+      Sum <br /><%= val1 ? val1 : 0 %> + <%= val2 ? val2 : 0 %> = <%= add ? add
+      : 0 %>
+    </p>
+    <p>
+      Diff <br /><%= val1 ? val1 : 0 %> - <%= val2 ? val2 : 0 %> = <%= subtract
+      ? subtract : 0 %>
+    </p>
+    <p>
+      Product <br /><%= val1 ? val1 : 0 %> * <%= val2 ? val2 : 0 %> = <%=
+      multiply ? multiply : 0 %>
+    </p>
+    <p>
+      Quotient <br /><%= val1 ? val1 : 0 %> / <%= val2 ? val2 : 0 %> = <%=
+      divide ? divide : 0 %>
+    </p>
+    <a href="/">Home</a>
+  </body>
+</html>
