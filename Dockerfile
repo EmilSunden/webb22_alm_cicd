@@ -3,9 +3,6 @@ FROM node:lts
 # Create app directory
 WORKDIR /usr/src/app
 
-# Set NODE_ENV
-ENV NODE_ENV production
-
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
@@ -18,5 +15,7 @@ RUN npm install
 # Bundle app source, but its better to copy the specific folder and files needed
 COPY . .
 
+# Set NODE_ENV
+ENV NODE_ENV production
 EXPOSE 3000
 CMD [ "node", "app.js" ]
