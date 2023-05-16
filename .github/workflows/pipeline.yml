@@ -28,7 +28,7 @@ jobs:
       - name: Runs Unit Test
         run: 'npm run test'
 
-      - name: Runs lint
+      - name: Run Lint Check
         run: 'npm run lint'
         
       
