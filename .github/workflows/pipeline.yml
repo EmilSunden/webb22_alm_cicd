@@ -8,12 +8,12 @@ on:
 jobs:
   echo_branch:
     runs-on: ubuntu-latest
-    
-    steps:       
-      - name: First pipeline
-        run: "echo Branch: main"
 
-  test:
+    steps:
+      - name: First step
+        run: 'echo Branch: main'
+
+  check_unit_test:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,6 +21,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-      - run: "npm i"
-      - run: "npm test"
+
+      - name: Installs Packets
+        run: 'npm i'
+
+      - name: Runs Unit Test
+        run: 'npm run test'
       
