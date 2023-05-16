@@ -1,6 +1,6 @@
 const assert = require('assert');
 const Calculator = require('../src/calculator');
-
+// Calculator
 describe('Calculator', function () {
   let calc;
   beforeEach(function () {
