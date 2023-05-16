@@ -1,0 +1,19 @@
+name: fakedeploy
+
+on:
+  push:
+
+jobs:
+  deploy_test_server:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref != 'refs/heads/main' }}
+    steps:
+      - name: Print Deploy Message
+        run: "echo now deploying branch: ${{ github.ref }} to the test server"
+
+  deploy_production:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    steps:
+      - name: Print Deploy Message
+        run: echo "now deploying to production"
