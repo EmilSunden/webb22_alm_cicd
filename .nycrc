@@ -3,6 +3,10 @@
     "report-dir": "coverage",
     "temp-dir": ".nyc_output",
     "all": true,
+    "check-coverage": true,
+    "exclude": [
+      "node_modules", "coverage/**", "commitlint.config.js", "test/**", "lint-staged.config.js"
+    ],
     "stmts": 80,
     "branch": 80,
     "funcs": 80,
