@@ -8,6 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.ref != 'refs/heads/main' }}
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+        
+      - name: Installing Dependencies
+        run: 'npm i'
+
+      - name: Set Env to Development
+        run: 'npm run setDev'
+
       - name: Print Deploy Message
         run: "echo now deploying branch: ${{ github.ref }} to the test server"
 
@@ -15,5 +26,16 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+        
+      - name: Installs Dependencies
+        run: 'npm i'
+
+      - name: Set Env to Production
+        run: 'npm run setProd'
+        
       - name: Print Deploy Message
         run: "echo now deploying to production"
