@@ -1,0 +1,10 @@
+{
+    "reporter": ["lcov", "text"],
+    "report-dir": "coverage",
+    "temp-dir": ".nyc_output",
+    "all": true,
+    "stmts": 80,
+    "branch": 80,
+    "funcs": 80,
+    "lines": 80
+  }
