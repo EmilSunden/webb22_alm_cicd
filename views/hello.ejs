@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
+    <title>Greet</title>
+  </head>
+  <body
+    style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    "
+  >
+    <a
+      href="/"
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: larger;
+        padding: 1rem;
+      "
+      >Back Home</a
+    >
+    <h1>Greeting</h1>
+
+    <div>
+      <form method="get" class="greet-form">
+        <label for="val1">Name</label>
+        <input type="text" name="val1" id="val1" />
+        <button>Greet Me!</button>
+      </form>
+      <p><%= sayHello ? sayHello : Hello %></p>
+    </div>
+  </body>
+</html>
