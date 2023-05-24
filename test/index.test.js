@@ -1,6 +1,6 @@
 const request = require('supertest');
 
-const assert = require('assert')
+const assert = require('assert');
 
 const app = require('../app');
 
@@ -15,6 +15,5 @@ describe('GET /', function () {
         assert.strictEqual(res.status, 200);
         return done();
       });
-
   });
 });
