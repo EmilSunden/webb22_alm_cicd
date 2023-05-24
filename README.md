@@ -4,9 +4,9 @@
 
 
 ## Husky
-``sh
+```sh
 npm install husky --save-dev
-``
+```
 
 Edit package.json > prepare script and run it once
 ```sh
