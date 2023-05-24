@@ -13,7 +13,7 @@ describe('Hello', function () {
   });
   describe('greet() using parameter', function () {
     it('should return Hello Emil when Emil is entered ', function () {
-      assert.equal(this.greet.greet('Emil'), 'Hello Emil');
+      assert.equal(this.greet.greet('Emil'), 'Hello Emill');
     });
   });
 });
